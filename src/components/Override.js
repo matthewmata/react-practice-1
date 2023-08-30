@@ -20,7 +20,7 @@ const Override = ({ tableData, index, setTableData }) => {
         name="override"
         onChange={handleChange}
       />
-      <label for="override">Override?</label>
+      <label htmlFor="override">Override?</label>
     </>
   );
 };

@@ -27,24 +27,22 @@ const Table = ({ tableData, setTableData }) => {
         ))}
       </tr>
       {tableData.map(
-        (
-          {
-            playerName,
-            playerId,
-            teamId,
-            teamNickname,
-            teamAbbr,
-            statType,
-            statTypeId,
-            position,
-            marketSuspended,
-            line,
-            override,
-            ...data
-          },
-          i
-        ) => (
-          <tr key={i}>
+        ({
+          playerName,
+          playerId,
+          teamId,
+          teamNickname,
+          teamAbbr,
+          statType,
+          statTypeId,
+          position,
+          marketSuspended,
+          line,
+          override,
+          index,
+          ...data
+        }) => (
+          <tr key={index}>
             <td>{playerName}</td>
             <td>{playerId}</td>
             <td>{teamId}</td>
@@ -59,7 +57,11 @@ const Table = ({ tableData, setTableData }) => {
               )}
             </td>
             <td>
-              <Override setTableData={setTableData} tableData={tableData} index={i}/>
+              <Override
+                setTableData={setTableData}
+                tableData={tableData}
+                index={index}
+              />
             </td>
             <td>{line}</td>
             <td>{data.lineData ? data.lineData.min : "n/a"}</td>

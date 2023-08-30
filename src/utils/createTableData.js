@@ -31,12 +31,15 @@ const createTableData = (markets, lines) => {
       }
     }
   );
-  markets.forEach((market) => {
+  
+  markets.forEach((market, i) => {
     // adds lineData to props obj
     let lineData = linesSortedByPlayerId[market.playerId][market.statTypeId];
     market.lineData = lineData;
     // adds an override property
     market.override = false;
+    // adds an index 
+    market.index = i;
   });
 
   return markets;

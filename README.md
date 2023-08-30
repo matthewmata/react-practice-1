@@ -14,13 +14,17 @@ respective under, over, and push probabilities.
 19.5, 20, and 20.5
 
 ## Goal
-Build a table representation of the data provided in props.json, where each row represents a
-market. For each market, also include the low and high lines for that market from
+Build a table representation of the data provided in props.json, where each row represents a market. 
+
+For each market, also include the low and high lines for that market from
 alternates.json.
 - i.e. for Westbrook’s points, there should be column’s for his low (18.5) and high (20.5)
 Table functionality:
+
 - The ability to filter by position, stat type, and or market status (suspended or not)
+
 - A search bar that filters on player name or team name
+
 - An indication of whether a market is suspended or not (detailed below)
 A market is suspended if any of these 3 cases are true
 1. marketSuspended = 1 for that market in props.json
